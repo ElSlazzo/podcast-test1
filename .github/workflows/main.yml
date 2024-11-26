@@ -2,13 +2,14 @@ name: Generate Podcast Feeds
 
 on: [push]
 
-jobs: 
+jobs:
   build:
     runs-on: ubuntu-latest
 
     steps:
       - name: Checkout Repo
         uses: actions/checkout@v3
-        -run: Run Feed Generator
-          uses: ElSlazzo/podcast-generator@main
+
+      - name: Run Feed Generator
+        uses: ElSlazzo/podcast-generator@main
 
